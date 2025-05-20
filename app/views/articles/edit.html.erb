@@ -1,0 +1,12 @@
+<div class="container mt-5">
+  <div class="mb-4">
+    <%= link_to article_path(@article), class: 'btn btn-outline-secondary' do %>
+      <i class="fas fa-arrow-left"></i> Back to article
+    <% end %>
+  </div>
+
+  <div class="bg-white p-4 shadow-sm rounded">
+    <h1 class="mb-4">Edit Article</h1>
+    <%= render 'form', article: @article %>
+  </div>
+</div> 

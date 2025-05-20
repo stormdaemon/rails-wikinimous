@@ -1,0 +1,26 @@
+<%= form_with(model: article) do |f| %>
+  <% if article.errors.any? %>
+    <div class="alert alert-danger">
+      <h4><%= pluralize(article.errors.count, "error") %> prohibited this article from being saved:</h4>
+      <ul>
+        <% article.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="mb-3">
+    <%= f.label :title, class: 'form-label' %>
+    <%= f.text_field :title, class: 'form-control' %>
+  </div>
+
+  <div class="mb-3">
+    <%= f.label :content, class: 'form-label' %>
+    <%= f.text_area :content, rows: 10, class: 'form-control' %>
+  </div>
+
+  <div class="mb-3">
+    <%= f.submit class: 'btn btn-primary' %>
+  </div>
+<% end %> 
