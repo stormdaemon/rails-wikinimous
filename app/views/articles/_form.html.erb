@@ -10,17 +10,17 @@
     </div>
   <% end %>
 
-  <div class="mb-3">
+  <div class="form-group">
     <%= f.label :title, class: 'form-label' %>
-    <%= f.text_field :title, class: 'form-control' %>
+    <%= f.text_field :title, class: 'form-control', placeholder: 'Enter article title' %>
   </div>
 
-  <div class="mb-3">
+  <div class="form-group">
     <%= f.label :content, class: 'form-label' %>
-    <%= f.text_area :content, rows: 10, class: 'form-control' %>
+    <%= f.text_area :content, rows: 12, class: 'form-control', placeholder: 'Write your article content here...' %>
   </div>
 
-  <div class="mb-3">
+  <div>
     <%= f.submit class: 'btn btn-primary' %>
   </div>
 <% end %> 
